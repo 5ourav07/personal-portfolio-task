@@ -52,6 +52,9 @@ export default {
         logoText: {
           DEFAULT: "hsl(var(--logo-text))",
         },
+        footerBg: {
+          DEFAULT: "hsl(var(--footer-bg))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

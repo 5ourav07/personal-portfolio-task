@@ -10,8 +10,8 @@ const TestimonialsSection = () => {
   return (
     <div className="mb-[60px] sm:mb-[139px]">
       <div className="text-center mb-14">
-        <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto px-4">
+        <h2 className="section-title">Testimonials</h2>
+        <p className="section-description max-w-[932px] mx-auto ">
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
           lectus netus in. Aliquet donec morbi convallis pretium
         </p>
@@ -62,17 +62,17 @@ const TestimonialsSection = () => {
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
-                        layout="fill"
+                        fill
                         className="rounded-full object-cover"
                       />
                     </div>
-                    <div className="flex-1">
-                      <p className="testimonial-text mb-5 h-[350px] sm:h-[146px]">
+                    <div className="flex-1 flex flex-col">
+                      <p className="testimonial-text min-h-[170px] flex items-center mb-5">
                         {testimonial.text}
                       </p>
                       <p className="testimonial-name">{testimonial.name}</p>
                       <p className="testimonial-designation">
-                        {testimonial.role}
+                        {testimonial.designation}
                       </p>
                     </div>
                   </div>

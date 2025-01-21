@@ -1,18 +1,7 @@
-import Image from "next/image";
 import CommonButton from "../CustomUI/CommonButton";
 import HeroImage from "../CustomUI/HeroImage";
+import SocialIconComponent from "../CustomUI/SocialIconComponent";
 import { SectionContainer } from "../Utils/Containers";
-import { SocialIcons } from "@/constants/SocialIcons";
-
-const SocialIcon = ({ src, alt }) => (
-  <Image
-    src={`/assets/images/icons/social-icons/${src}.svg`}
-    alt={`${alt}-icon`}
-    width={32.48}
-    height={32.48}
-    className="hover:opacity-80 transition-opacity cursor-pointer"
-  />
-);
 
 export default function BannerSection() {
   return (
@@ -43,9 +32,7 @@ export default function BannerSection() {
         <div className="lg:flex-1 flex flex-col justify-center items-center gap-[36px] relative w-full max-w-[538px]">
           <HeroImage />
           <div className="flex items-center gap-4 md:gap-[25px]">
-            {SocialIcons.map((icon) => (
-              <SocialIcon key={icon.src} {...icon} />
-            ))}
+            <SocialIconComponent />
           </div>
         </div>
       </div>

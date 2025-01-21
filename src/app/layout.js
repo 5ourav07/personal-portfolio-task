@@ -1,4 +1,5 @@
 import LayoutProvider from "@/components/Layout/LayoutProvider";
+import { ThemeProvider } from "@/components/Utils/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
@@ -22,13 +23,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.variable} ${montserrat.variable} antialiased`}
-        suppressHydrationWarning={true}
+        suppressHydrationWarning
       >
-        <LayoutProvider>{children}</LayoutProvider>
-        <Toaster position="top-center" richColors />
+        <ThemeProvider>
+          <LayoutProvider>{children}</LayoutProvider>
+          <Toaster position="top-center" richColors theme="system" />
+        </ThemeProvider>
       </body>
     </html>
   );
