@@ -31,7 +31,7 @@ export default function MyProjectsSection() {
         </div>
 
         <div className="mt-[59px]">
-          <Tabs defaultValue="all" className="w-full">
+          <Tabs defaultValue="web-design" className="w-full">
             <TabsList className="flex justify-center gap-[17px] flex-wrap">
               <TabsTrigger className="my-project-tab mr-[5px]" value="all">
                 All
